@@ -1,12 +1,13 @@
 body {
    margin: 115px auto; 
-   width: 550px;
+   width: 90%;
+   max-width: 550px;
    height: auto;
    background-color: #33006F;
    color: #ffffff;
    font-family: "Space Grotesk", serif;
 }
-
+/* Hero Section */
 #hero-generate{
     margin-bottom: 0px;
     font-size: 40px;
@@ -23,7 +24,7 @@ body {
     margin-top: 0px;
     margin-bottom: 50px;
 }
-
+/* Main Button section */
 #btn-main {
     background-color: #ECC083;
     color: #33006F;
@@ -35,7 +36,22 @@ body {
     font-family: inherit;
 }
 
+#btn-main:hover{
+    background-color: #F1C40F;
+    color: #33006F;
+}
 
+#btn-main:active{
+    transform: scale(0.98);
+}
+
+btn-main:focus,
+input[type="checkbox"]+label:focus {
+    outline: 2px solid #F1C40F;
+    outline-offset: 2px;
+}
+
+/* Number & Symbols Toggles */
 .toggles-container {
     margin-bottom: 15px;
     display: flex;
@@ -69,6 +85,7 @@ input[type="checkbox"]:checked + label:before {
         border: none;
     }
 input[type="checkbox"]:checked + label:after {
+        content:"✔";
         position: absolute;
         left: 4px;
         top: 0px;
@@ -82,7 +99,7 @@ input[type="checkbox"] + label:hover:before {
 #pw-custom{
     margin-top: 20px;
 }
-
+/* PW length */
 #length-input {
     -webkit-appearance: none;
     outline: none;
@@ -108,7 +125,7 @@ input[type="checkbox"] + label:hover:before {
     border-radius: 4px;
     
 }
-
+/* Divider */
 #solid {
     margin: 35px 0px;
     height: 1.5px;
@@ -116,7 +133,7 @@ input[type="checkbox"] + label:hover:before {
     border: none;
     opacity: 70%;
 }
-
+/* Pw Results are shown here */
 #pw-placeholders{
     color: #ECC083;
     padding: 20px;
@@ -125,7 +142,7 @@ input[type="checkbox"] + label:hover:before {
     gap: 70px;
     align-items: center;
     border-radius: 5px;
-    width: 95%;
+    width: 100%;
     max-width: 550px;
     min-height: 20px;
 }
@@ -139,7 +156,8 @@ input[type="checkbox"] + label:hover:before {
 #pw-placeholders span {
     padding: 10px;
     border-radius: 5px;
-    background-color: transparent;  
+    background-color: transparent;
+    font-size:18px;  
     color: #33006F;  
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -158,4 +176,76 @@ input[type="checkbox"] + label:hover:before {
 footer{
     font-size: 8px;
     color: rgba(255, 255, 0, 0.3);
+}
+
+
+@media (max-width: 768px) {
+    body {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    #hero-generate {
+        font-size: 30px;
+    }
+
+    #hero-random {
+        font-size: 25px;
+    }
+
+    #hero-text {
+        font-size: 14px;
+    }
+
+    #btn-main {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #toggles {
+        flex-direction: column;
+    }
+
+    #pw-placeholders {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px 10px;
+    }
+
+    #pw-placeholders span {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        width: 800px;
+    }
+
+    #hero-generate {
+        font-size: 50px;
+    }
+
+    #hero-random {
+        font-size: 45px;
+    }
+
+    #hero-text {
+        font-size: 20px;
+    }
+
+    #btn-main {
+        width: auto;
+        padding: 10px 20px;
+    }
+
+    #pw-placeholders {
+        gap: 100px;
+    }
 }

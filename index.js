@@ -10,6 +10,8 @@ let lengthInput = document.getElementById("length-input")
 let lengthValue = document.getElementById("length-value")
 
 function updateLength() {
+    const lengthInput = document.getElementById("length-input");
+    const lengthValue = document.getElementById("length-value");
     lengthValue.textContent = lengthInput.value;
 }
 
